@@ -2,7 +2,7 @@
 
 A Chrome/Firefox extension that locks WhatsApp Web, Telegram Web, and other sites behind a password-protected overlay.
 
-🔒 No passwords stored in plaintext — only SHA-256 hashes  
+🔒 No passwords stored in plaintext only SHA-256 hashes  
 🛡️ Blocks F12, right-click, console tampering  
 ⚙️ Fully configurable via extension options
 
