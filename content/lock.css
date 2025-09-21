@@ -1,0 +1,80 @@
+#siteLockerOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999; 
+    
+    background-image: url("chrome-extension://__MSG_@@extension_id__/pngs/dystopian.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #E0E0E0;
+    pointer-events: all;
+}
+
+.lock-card {
+    background-color: #1d1f28; 
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 1px solid #383838;
+}
+
+#siteLockerOverlay h1 {
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #00E676;
+    text-shadow: 0 0 10px rgba(0, 230, 118, 0.4);
+}
+
+#siteLockerOverlay p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #B0B0B0;
+}
+
+#siteLockerPasswordInput {
+    padding: 15px;
+    width: 250px;
+    background-color: #383838;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+    color: #E0E0E0;
+}
+
+#siteLockerPasswordInput:focus {
+    outline: none;
+    border-color: #00E676;
+    box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.3);
+}
+
+#siteLockerUnlockBtn {
+    padding: 12px 25px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #00C853 0%, #00E676 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 230, 118, 0.3);
+}
+
+#siteLockerUnlockBtn:hover {
+    background: linear-gradient(90deg, #00B04F 0%, #00D16B 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 230, 118, 0.4);
+}

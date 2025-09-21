@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>siteLocker Options</title>
+    <link rel="stylesheet" href="options.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔐 siteLocker Settings</h1>
+        <p class="description">Secure your sensitive websites with a master password.</p>
+
+        <section class="card" id="optionsLockScreen">
+            <h2>Access Settings</h2>
+            <div class="input-group">
+                <input type="password" id="accessPasswordInput" placeholder="Enter current password to access settings">
+                <button id="accessUnlockBtn" class="btn btn-primary">Unlock</button>
+            </div>
+            <p id="accessWarning" class="warning" style="display: none;">⚠️ Incorrect password!</p>
+        </section>
+
+        <div id="mainSettings" style="display: none;">
+            <section class="card">
+                <h2>Set Password</h2>
+                <div class="input-group">
+                    <input type="password" id="passwordInput" placeholder="Enter new password">
+                    <input type="password" id="confirmPasswordInput" placeholder="Confirm new password">
+                </div>
+                <button id="savePasswordBtn" class="btn btn-primary">Save Password</button>
+                <p id="passwordWarning" class="warning" style="display: none;">⚠️ Passwords do not match!</p>
+                <p class="warning">⚠️ Keep this password safe. It cannot be recovered!</p>
+            </section>
+
+            <section class="card">
+                <h2>Locked Sites</h2>
+                <div class="input-group">
+                    <input type="text" id="siteInput" placeholder="e.g., web.whatsapp.com">
+                    <button id="addSiteBtn" class="btn btn-secondary">Add Site</button>
+                </div>
+                <ul id="siteList" class="site-list"></ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>

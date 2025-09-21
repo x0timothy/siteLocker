@@ -1,0 +1,186 @@
+:root {
+    --background-color: #030816;
+    --card-background: #1d1f28; 
+    
+    --primary-color: #00E676;
+    --secondary-color: #3D5AFE;
+    
+    /* Text colors */
+    --text-color: #E0E0E0;
+    --light-text-color: #B0B0B0;
+    
+    /* Border and Warning colors */
+    --border-color: #383838;
+    --warning-color: #FF6347;
+    --danger-color: #ff0000;
+
+    /* Button gradients  */
+    --button-gradient-start: #00C853;
+    --button-gradient-end: #00E676;
+    --secondary-button-gradient-start: #304FFE;
+    --secondary-button-gradient-end: #3D5AFE;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 8px rgba(0, 230, 118, 0.4);
+}
+
+.description {
+    text-align: center;
+    color: var(--light-text-color);
+    margin-bottom: 2em;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+input[type="password"],
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    background-color: #383838;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.3);
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--button-gradient-start) 0%, var(--button-gradient-end) 100%);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 230, 118, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #00B04F 0%, #00D16B 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 230, 118, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(90deg, var(--secondary-button-gradient-start) 0%, var(--secondary-button-gradient-end) 100%);
+    color: white;
+    box-shadow: 0 4px 10px rgba(61, 90, 254, 0.3);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(90deg, #2D3EDD 0%, #354ADF 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(61, 90, 254, 0.4);
+}
+
+.site-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.site-list li {
+    background-color: #333333;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    font-size: 1em;
+    color: var(--light-text-color);
+}
+
+.site-list li button {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.site-list li button:hover {
+    background-color: #D60000;
+    transform: translateY(-1px);
+}
+
+.warning {
+    color: var(--warning-color);
+    font-size: 0.9em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.input-group input[type="password"] {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 480px) {
+    .input-group {
+        flex-direction: column;
+    }
+    .input-group input,
+    .input-group button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

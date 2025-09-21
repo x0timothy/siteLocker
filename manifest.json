@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "siteLocker",
+  "version": "1.0",
+  "description": "Lock sensitive websites with a password.",
+  "permissions": [
+    "storage",
+    "webNavigation"
+  ],
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/lock.js", "content/devtools_blocker.js"],
+      "css": ["content/lock.css"]
+    }
+  ],
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "pngs/icon16.png",
+    "48": "pngs/icon48.png",
+    "128": "pngs/icon128.png"
+  },
+  "web_accessible_resources": [{
+    "resources": ["pngs/dystopian.jpg"],
+    "matches": ["<all_urls>"]
+  }]
+}
